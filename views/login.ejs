@@ -1,0 +1,14 @@
+<%- include('header'); -%>
+
+    <div class='content'>
+        <form action="/api/login" method="GET">
+            <p style="font-size: x-large; font-family: Verdana, Geneva, Tahoma, sans-serif;">Sign-in</p>
+            <input type="text" name="username" placeholder="Username" style="margin-bottom: 10px; margin-top: 10px; padding: 10px;"><br>
+
+            <input type="text" name="password" placeholder="Password" style="margin-bottom: 10px; margin-top: 10px; padding: 10px;"><br>
+            
+            <button type="submit" style="margin-bottom: 50px; margin-top: 20px; padding: 10px; padding-right: 15px; text-align: center;">Submit</button>
+        </form>
+    </div>
+
+<%- include('footer'); -%>

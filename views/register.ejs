@@ -1,0 +1,51 @@
+<%- include('header'); -%>
+
+    <div class='content'>
+        <form action="/api/register" method="post">
+
+            <p style="font-size: x-large; font-family: Verdana, Geneva, Tahoma, sans-serif;">Register-</p>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter a Username:</label><br>
+            <input type="text" name="username" placeholder="Username" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter a password:</label><br>
+            <input type="text" name="password" placeholder="Password" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter the name of your society:</label><br>
+            <input type="text" name="society" placeholder="Society name" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter your name:</label><br>
+            <input type="text" name="contact" placeholder="Name" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter your address:</label><br>
+            <input type="text" name="address" placeholder="Address" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter your Zip code:</label><br>
+            <input type="text" name="zip" placeholder="Zipcode" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter the name of your city:</label><br>
+            <input type="text" name="city" placeholder="City" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter your phone number:</label><br>
+            <input type="number" name="phone" placeholder="Phone" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter your fax number:</label><br>
+            <input type="number" name="fax" placeholder="Fax" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter your confiramtion number:</label><br>
+            <input type="number" name="confiramtion" placeholder="Confirmation number" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter your payment method:</label><br>
+            <input type="text" name="payment" placeholder="Payment method" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter some information about your transaction:</label><br>
+            <input type="text" name="information" placeholder="Transaction details" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+
+            <label style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Enter your max-outstanding:</label><br>
+            <input type="number" name="max-outstanding" placeholder="Max-Outstanding" style="padding:10px ;border: 2.5px; border-style: solid;"><br>
+            
+            <button type="submit" style="margin-bottom: 50px; margin-top: 20px; padding: 10px; padding-right: 15px; text-align: center;">Submit</button>
+        </form>
+    </div>
+
+<%- include('footer'); -%>
