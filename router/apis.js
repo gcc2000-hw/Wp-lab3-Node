@@ -10,11 +10,21 @@ const router = express.Router();
 //-----------------------------------------------
 router.get('/api/article/:id', (req, res) => {
     console.log(req.params.id)
+    console.log("HERE")
     ProductService.searchIDService(req.params.id, function(err, rows) {
         res.render('article', { product: rows });
 
     });
 });
+router.get('/api/client/:id', (req, res) => {
+    console.log(req.params.name)
+    console.log("HERE")
+    clientService.searchNameService(req.params.id, function(err, rows) {
+        res.render('client', { clientlists: rows });
+
+    });
+});
+router.get('/api/clientsList', clientController.getClients);
 //route for listing all products
 router.get('/api/catalog', productController.getCatalogue);
 //routes for dynamic processing of clients

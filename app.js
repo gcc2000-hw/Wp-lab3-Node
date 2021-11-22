@@ -32,9 +32,7 @@ app.get("/login", (req, res) => {
     res.render('login');
 });
 
-app.get("/client", (req, res) => {
-    res.render('client');
-});
+
 
 const port = process.argv[2] || process.env.PORT || 3000;
 const server = app.listen(port, () => {

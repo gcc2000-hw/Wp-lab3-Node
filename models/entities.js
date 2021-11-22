@@ -1,15 +1,18 @@
 class Client {
-    constructor(username, password, num_client, society, contact, addres, zipcode, city, phone, fax, max_outstanding) {
+    constructor(username, password, num_client, society, contact, address, zipcode, city, phone, fax, confirmation, payment, information, max_outstanding) {
         this.username = username;
         this.password = password;
         this.num_client = num_client;
         this.society = society;
         this.contact = contact;
-        this.addres = addres;
+        this.address = address;
         this.zipcode = zipcode;
         this.city = city;
         this.phone = phone;
         this.fax = fax;
+        this.confirmation = confirmation;
+        this.payment = payment;
+        this.information = information;
         this.max_outstanding = max_outstanding;
     }
 }

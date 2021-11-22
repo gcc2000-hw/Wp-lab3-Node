@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 //select all clients
 function find(callback) {
     var rows = null;
-    const select = (`select * from account;`)
+    const select = (`select * from client;`)
     database.getResult(select, function(err, rows){
         if(!err){
             callback(null, rows);
@@ -64,7 +64,7 @@ function createAccount(num_client, username, password, callback) {
 
 function createClient(client, callback) {
     //insert client
-    const insertClient = (`INSERT INTO client(society, contact, addres, zipcode, city, phone, fax, max_outstanding) VALUES('${client.society}', '${client.contact}', '${client.address}', '${client.zipcode}', '${client.city}', '${client.phone}', '${client.fax}', ${client.max_outstanding});`);
+    const insertClient = (`INSERT INTO client(society, contact, addres, zipcode, city, phone, fax, confirmation, payment, Informations, max_outstanding) VALUES('${client.society}', '${client.contact}', '${client.address}', '${client.zipcode}', '${client.city}', '${client.phone}', '${client.fax}', '${client.confirmation}', '${client.payment}', '${client.information}','${client.max_outstanding}');`);
     database.getResult(insertClient, function(err1, result1) {
         if (!err1) {
             //if no error insert their account
@@ -106,6 +106,17 @@ function deleteClient(num_client, callback){
         }
     });
 }
+
+function findName(name, callback){
+    const selectClient = (`select * from client where contact like '${name}';`);
+    database.getResult(selectClient, function(err, rows) {
+        if (!err) {
+            callback(null, rows);
+        } else {
+            console.log(err);
+        }
+    });
+}
 module.exports = {
     find,
     findByUsername,
@@ -113,4 +124,5 @@ module.exports = {
     findByNumclient,
     createClient,
     deleteClient,
+    findName,
 };
