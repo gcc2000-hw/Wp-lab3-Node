@@ -65,7 +65,7 @@ const registerControl = (request, response) => {
 const getClients = (request, response) => {
     const clientServices = require('../services/clientServices');
     clientServices.searchService(function(err, rows) {
-        response.render('clientsList', { clientlists: rows });
+        response.render('clientsList', { clientlist: rows });
     });
 };
 

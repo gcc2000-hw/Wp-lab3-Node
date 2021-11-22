@@ -16,10 +16,10 @@ router.get('/api/article/:id', (req, res) => {
 
     });
 });
-router.get('/api/client/:id', (req, res) => {
+router.get('/api/client/:name', (req, res) => {
     console.log(req.params.name)
     console.log("HERE")
-    clientService.searchNameService(req.params.id, function(err, rows) {
+    clientService.searchNameService(req.params.name, function(err, rows) {
         res.render('client', { clientlists: rows });
 
     });
