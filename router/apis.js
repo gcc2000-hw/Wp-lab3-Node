@@ -22,6 +22,7 @@ router.get('/api/catalog', productController.getCatalogue);
 //route for registration
 router.post('/api/register', clientController.registerControl);
 //route for login
-router.post('/api/login', clientController.loginControl)
+router.post('/api/login', clientController.loginControl);
+
 //export router
 module.exports = router;

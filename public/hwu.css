@@ -4,12 +4,13 @@ root {
 
 a {
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #116be0;
+    color: #1c3191;
     text-decoration: none;
 }
 
 a:hover {
-    background: #66ff66
+    color: white;
+    background: #494949
 }
 
 a:visited {

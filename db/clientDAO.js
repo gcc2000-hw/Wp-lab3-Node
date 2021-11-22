@@ -4,9 +4,14 @@ const bcrypt = require("bcryptjs");
 //select all clients
 function find(callback) {
     var rows = null;
-    //put your code her to select clients and return the array
-    //....
-    callback(null, rows);
+    const select = (`select * from account;`)
+    database.getResult(select, function(err, rows){
+        if(!err){
+            callback(null, rows);
+        }else{
+            console.log(err);
+        }
+    });
 }
 
 function findByUsername(username, callback) {
@@ -59,7 +64,7 @@ function createAccount(num_client, username, password, callback) {
 
 function createClient(client, callback) {
     //insert client
-    const insertClient = (`INSERT INTO client(society, contact, addres, zipcode, city, phone, fax, max_outstanding) VALUES('${client.society}', '${client.contact}', '${client.addres}', '${client.zipcode}', '${client.city}', '${client.phone}', '${client.fax}', ${client.max_outstanding});`);
+    const insertClient = (`INSERT INTO client(society, contact, addres, zipcode, city, phone, fax, max_outstanding) VALUES('${client.society}', '${client.contact}', '${client.address}', '${client.zipcode}', '${client.city}', '${client.phone}', '${client.fax}', ${client.max_outstanding});`);
     database.getResult(insertClient, function(err1, result1) {
         if (!err1) {
             //if no error insert their account

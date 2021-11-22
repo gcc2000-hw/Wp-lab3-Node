@@ -1,28 +1,28 @@
 <%- include('header'); -%>
-    <table>
+    <table style="border: 5px; border-color: black; border-style: solid; padding-bottom: 10px;">
         <tr>
-            <td> Product</td>
-            <td><%= product.name %></td>
+            <td style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;padding: 4px;"> Product -</td>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif; padding-left: 5px;"><%= product.name %></td>
         </tr>
         <tr>
-            <td>Supplier</td>
-            <td><%= product.supplier %>AED</td>
+            <td style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;padding: 4px;">Supplier -</td>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif;padding-left: 5px;"><%= product.supplier %></td>
         </tr>
         <tr>
-            <td>Price</td>
-            <td><%= product.price %>AED</td>
+            <td style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;padding: 4px;">Price -</td>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif;padding-left: 5px;"><%= product.price %>AED</td>
         </tr>
         <tr>
-            <td>Vat tax:</td>
-            <td><%= product.vat %></td>
+            <td style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;padding: 4px;">Vat tax -</td>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif;padding-left: 5px;"><%= product.vat %> AED </td>
         </tr>
         <tr>
-            <td>Remaining Stock:</td>
-            <td><%= product.stock %></td>
+            <td style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;padding: 4px;">Remaining Stock -</td>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif;padding-left: 5px;"><%= product.stock %> pieces </td>
         </tr>
         <tr>
-            <td>Critical Stock:</td>
-            <td><%= product.critical_stock %></td>
+            <td style="font-size: medium; font-family: Verdana, Geneva, Tahoma, sans-serif;">Critical Stock -</td>
+            <td style="font-family: Verdana, Geneva, Tahoma, sans-serif;padding-left: 5px;"><%= product.critical_stock %> pieces </td>
         </tr>
     </table>
 <%- include('footer'); -%>
