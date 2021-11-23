@@ -24,7 +24,7 @@ router.get('/api/client/:name', (req, res) => {
 
     });
 });
-router.get('/api/clientsList', clientController.getClients);
+router.get('/api/clientsList',clientController.getClients);
 //route for listing all products
 router.get('/api/catalog', productController.getCatalogue);
 //routes for dynamic processing of clients

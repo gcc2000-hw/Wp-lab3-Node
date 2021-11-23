@@ -1,5 +1,5 @@
 class Client {
-    constructor(username, password, num_client, society, contact, address, zipcode, city, phone, fax, confirmation, payment, information, max_outstanding) {
+    constructor(username, password, num_client, society, contact, address, zipcode, city, phone, fax, confirmation, payment, information, max_outstanding, isAdmin) {
         this.username = username;
         this.password = password;
         this.num_client = num_client;
@@ -14,6 +14,7 @@ class Client {
         this.payment = payment;
         this.information = information;
         this.max_outstanding = max_outstanding;
+        this.isAdmin = isAdmin;
     }
 }
 

@@ -26,5 +26,5 @@ const getProductsByCategory = (request, response) => {
 module.exports = {
     getCatalogue,
     getProductByID,
-    getProductsByCategory
+    getProductsByCategory,
 };

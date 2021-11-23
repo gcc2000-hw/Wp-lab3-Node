@@ -9,7 +9,7 @@ const loginControl = (request, response) => {
     } else {
         if (request.session && request.session.user) {
             alert("Already signed-in!");
-            response.render(`index`)
+            response.render(`AlreadyLogged`)
         } else {
             clientServices.loginService(username, password, function(err, dberr, client) {
                 console.log("Client from login service :" + JSON.stringify(client));
@@ -21,8 +21,9 @@ const loginControl = (request, response) => {
                     //add to session
                     request.session.user = username;
                     request.session.num_client = client[0].num_client;
-                    request.session.admin = false;
-                    response.render(`index`);
+                    if(username === "Drake") request.session.admin = true;
+                    else request.session.admin = false;
+                    response.render(`logged`);
                     response.end();
                 }
             });
@@ -76,11 +77,11 @@ const getClientByNumclient = (request, response) => {
         response.json(rows);
         response.end();
     });
-};
+}; 
 
 module.exports = {
     loginControl,
     registerControl,
     getClients,
-    getClientByNumclient
+    getClientByNumclient,
 };

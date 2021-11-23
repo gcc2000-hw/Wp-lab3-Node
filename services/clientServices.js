@@ -1,6 +1,7 @@
 const { Client } = require('../models/entities');
 const clientDAO = require('../db/clientDAO');
 const bcrypt = require("bcryptjs");
+const session = require('express-session');
 
 const loginService = (typedUsername, typedPassword, callback) => {
     //check if the user is in the DB
@@ -120,6 +121,7 @@ const deleteService = function(num_client, callback) {
         }
     });
 };
+
 module.exports = {
     loginService,
     registerService,
