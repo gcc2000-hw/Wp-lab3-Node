@@ -65,9 +65,14 @@ const registerControl = (request, response) => {
 
 const getClients = (request, response) => {
     const clientServices = require('../services/clientServices');
-    clientServices.searchService(function(err, rows) {
-        response.render('clientsList', { clientlist: rows });
-    });
+    if(request.session && request.session.user && request.session.admin){
+        clientServices.searchService(function(err, rows) {
+            response.render('clientsList', { clientlist: rows });
+        });
+    }
+    else{
+        response.render('NOTADMIN');
+    }
 };
 
 const getClientByNumclient = (request, response) => {
