@@ -1,4 +1,5 @@
 const { Client } = require('../models/entities');
+const admins = ["Drake", "xyz", "JohnCena", "FrankOcean"];
 const alert = require(`alert`);
 const loginControl = (request, response) => {
     const clientServices = require('../services/clientServices');
@@ -21,7 +22,7 @@ const loginControl = (request, response) => {
                     //add to session
                     request.session.user = username;
                     request.session.num_client = client[0].num_client;
-                    if(username === "Drake") request.session.admin = true;
+                    if(admins.includes(username)) request.session.admin = true;
                     else request.session.admin = false;
                     response.render(`logged`);
                     response.end();
